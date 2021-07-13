@@ -73,16 +73,14 @@ public class Simulator {
 //				int num = (int)(Math.random()*3)+1 ;
 				
 				if (num<1.0) {
-					this.queue.add(
-							new Event(
-									e.getTime().plus(Duration.of(1, ChronoUnit.HOURS)),
-									EventType.RITORNO_AUTO											
-									)
-							) ;
-				} else if(num<2.0) {
+					this.queue.add(new Event(e.getTime().plus(Duration.of(1, ChronoUnit.HOURS)),
+							EventType.RITORNO_AUTO)) ;
+				} 
+				else if(num<2.0) {
 					this.queue.add(new Event(e.getTime().plus(Duration.of(2, ChronoUnit.HOURS)),
 							EventType.RITORNO_AUTO)) ;
-				} else {
+				} 
+				else {
 					this.queue.add(new Event(e.getTime().plus(Duration.of(3, ChronoUnit.HOURS)),
 							EventType.RITORNO_AUTO)) ;
 					
